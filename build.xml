@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="taw-installer" default="release">
+
+	<property file="build.properties" />
+	<property name="build.dir" value="${basedir}/target" />
+	<property name="build.staging" value="${build.dir}/staging" />
+	<property name="build.release" value="${build.dir}/release" />
+
+    <target name="release" depends="release-windows">
+    </target>
+
+    <target name="release-windows">
+    		<mkdir dir="${build.dir}/release"/>
+    	   <exec command="makensis" dir="packaging/windows">
+    	    <arg value="pf.nsis"/>
+    	   </exec>
+    </target>
+    
+	<!-- Clean -->
+
+	<target name="clean">
+		<delete dir="${build.release}" />
+		<delete dir="${build.staging}" />
+	</target>
+</project>

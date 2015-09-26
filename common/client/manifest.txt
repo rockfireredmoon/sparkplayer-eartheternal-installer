@@ -1,0 +1,24 @@
+SPARK_MANIFEST_0
+LibPlayer.dll : 6f654ff21b492aebab643f1010ca1de3 : 831838
+OgreMain.dll : 707414148e40610abf34e793a323e13c : 2030740
+Plugin_CgProgramManager.dll : c8aa0ddbb5693b1616d825542931fa92 : 26688
+Plugin_OctreeSceneManager.dll : 66612397e9baa8c64b5b6e74d43ece76 : 161275
+Plugin_ParticleFX.dll : 177056e009ab38dbdfb9c7ee96cecd11 : 33036
+Plugins.cfg : 6b83b2629712a7b8384d720ee226e0d6 : 153
+RenderSystem_Direct3D9.dll : 5ef2a3e7ac7ff819c83f65add9ab7553 : 175964
+RenderSystem_GL.dll : e859729bd75fa3f9c79232fff20c732b : 236986
+Resource\Core.car : 3e25163e0d7d9f390e348cf1f063d215 : 200304
+Resource\Preloader.car : b50675f1a65012105f7173e2283bbdd3 : 3015
+Spark.exe : cd40dcf8503ae3cb366e87b4663059c3 : 89157
+SparkPlayerIE.dll : 0d3e8a014fab868cc584315bd1523d0b : 90019
+Update.exe : 8a34695d170a7e65b91ac304d05a40b2 : 286927
+cabundle.pem : 5039fce36ca9a5bebabc595fe07e38af : 102322
+cg.dll : a9e7f5bfd826fe624b753749e70c0fdd : 694395
+fmod.dll : b8d0cce2ca1cc850c8c6f25a70d855e6 : 154378
+libeay32.dll : 40b0fa47f43b65cf9b4ece03ef62c704 : 482465
+npSparkPlayerNS.dll : 7afea1de4759caacb05f75f6b2715c40 : 83181
+resources.cfg : 154a6d4928294796c7db8e67f477332e : 58
+ssleay32.dll : 722fa2f70db393d404316e99d76b3436 : 100745
+zlib1.dll : 3ecfe1baeab591769664567c4e653e6f : 31853
+PATCH_URL : http://static.beta.eartheternal.com/Release/Current/Platform/
+RUNTIME_VERSION : 3
