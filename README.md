@@ -1,5 +1,8 @@
-# tawinstaller
-The Anubian War Installer - NCS installer for Windows
+# sparkplayer-eartheternal-installer
+
+The Anubian War Installer - NSIS installer for Windows. This takes the SparkPlayer executables and
+"Earth Eternal - The Anubian War" assets and makes an installer pointing to the current Anubian War
+server. 
 
 ## To Build
 
@@ -7,11 +10,10 @@ The Anubian War Installer - NCS installer for Windows
 
  * Java Runtime
  * Ant
- * EarthEternal.archive, Core.core and Preloader.car
+ * sparkplayer-eartheternal module (requests will be considered). This should be checked-out in the 
+   same parent folder as this module.
  
 ### Procedure
 
- 1. Copy EarthEternal.archive to common/client/cache
- 1. Copy Core.car and Preloader.car to common/client/Resource
  1. Run ant
  1. Results will be in target/release
