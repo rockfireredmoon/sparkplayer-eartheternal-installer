@@ -1,3 +1,76 @@
+The Scourge Of Abidan, Valkal's Shadow and The Anbuian War
+==========================================================
+
+These 3 'editions' are all derived from Grethnefars Planet Forever
+server and the ICEEE server.
+
+(C)2015,2017
+All new features and contents additions are licensed under the GPLv3.
+https://opensource.org/licenses/gpl-3.0
+
+Original Content since Greth's release ('IceEE' server)
+=======================================================
+
+Anything by the IceEE team.
+(C)2015 Released under the "Do-what-you-want-just-as-long-as-its-not-for-profit" license.
+
+Grethnefar's Server
+===================
+
+Was made public in March 2015 under no particular license. If you ever speak to him, thank him a lot. 
+Without Grethnefar this game would no longer exist.
+
+Additional Audio
+================
+
+Credits for additional audio content added to the game.
+
+#####Gloom Horizon - Ambient music used in Grunes Tal undead region
+#####Crossing The Chasm - Ambient music used in Swineland region
+#####Dark Times - Activate music used in Bloodkeep
+#####Land Of Phantoms - Ambient music used in Bloodkeep
+#####Some Amount Of Evil - Ambient music used in Bloodkeep
+#####Killers - Ambient music used in fight scene in Bloodkeep
+#####Chee Zee Cave - Activate music used in Southend Passage
+#####Night Cave - Music used in Forest Cave
+#####Dragon And Toast - Music used in Fangarian's Lair
+#####Grim Idol - Fight Music used in Fangarian's Lair
+#####The Hive - Music used in Skrill Queen Lair
+#####The Hive - Background Music used in Skrill Queen Lair
+#####Constance - Figh Music used in Skrill Queen Lair
+#####Christmas Rap - Ambient music used for Winter Dawning region
+#####Wish Backgroud  - Ambient music used for Winter Dawning region
+
+Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/
+
+#####Tap - Finale in Valkal's Bloodkeep
+Music: Alexander Nakarada (www.serpentsoundstudios.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+Lots of sound effects used as background or spot effects throughout the
+game came from freesound.org. All of these are 
+Licensed under Creative Commons: By Attribution 3.0
+
+#####Forest Evening - cediez - https://www.freesound.org/people/cediez/
+#####Kankbeeld Horror Pack - Kankbeeld - http://www.freesound.org/people/klankbeeld/
+#####Dungeon Ambiance - https://freesound.org/people/phlair/sounds/388340/
+#####Lava loop - Audionautics - https://freesound.org/people/Audionautics/sounds/133901/
+#####Dripping Cave - dobroide - https://freesound.org/people/dobroide/sounds/396314/
+#####Thunder Pack - hantorio - https://freesound.org/people/hantorio/packs/7640/
+#####Intro 01 - rhodesmas - https://freesound.org/people/rhodesmas/sounds/353206/
+#####10 Second Countdown - thomasevd - https://freesound.org/people/thomasevd/sounds/202193/
+
+# Other Combat Effects
+
+"Cave Bats Sound"
+
+Mike Koenig
+Licensed under Creative Commons: By Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/
+
 Original Content By Sparkplay
 =============================
 
@@ -11,30 +84,3 @@ a kitten instead.
     | \|| || 
     \ '|| || 
      \)()-())
-     
-Grethnefar's Server
-=============
-
-Was made public in March 2015 under no particular license. If you ever speak to him, thank him a lot. 
-Without Grethnefar this game would now longer exist.
-
-Original Content since Greth's release ('IceEE' server)
-=======================================================
-
-Anything by the IceEE team.
-(C)2015 Released under the "Do-what-you-want-just-as-long-as-its-not-for-profit" license.
-
-Additional Audio
-================
-
-Credits for additional audio content added to the game.
-
-#####Gloom Horizon - Ambient music used in Grunes Tal undead region
-
-Kevin MacLeod (incompetech.com)
-Licensed under Creative Commons: By Attribution 3.0
-http://creativecommons.org/licenses/by/3.0/
-
-#####Kankbeeld Horror Pack - Ambient background used in Grunes Tal
-
-Sound from http://www.freesound.org/people/klankbeeld/
