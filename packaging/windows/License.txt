@@ -1,3 +1,10 @@
+********************************************************
+* This is a special build of the client especially for *
+* the development team. If you are an ordinary player  *
+* please download the main client, this one is of no   *
+* use to you!                                          *
+********************************************************
+
 The Scourge Of Abidan, Valkal's Shadow and The Anbuian War
 ==========================================================
 
