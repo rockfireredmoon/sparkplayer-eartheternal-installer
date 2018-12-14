@@ -8,6 +8,7 @@ server.
 
 ### Pre-requisites
 
+ * NSIS (NullSoft Install System)
  * Java Runtime
  * Ant
  * sparkplayer-eartheternal module (requests will be considered). This should be checked-out in the 
