@@ -1,1 +1,1 @@
-For more information, see http://www.theanubianwar.com
+Just for fun!

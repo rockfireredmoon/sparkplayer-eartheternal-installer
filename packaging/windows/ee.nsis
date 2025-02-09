@@ -1,4 +1,4 @@
-;Earth Eternal - Valkal's Shadow
+;Earth Eternal Reborn
 
 ;--------------------------------
 ;Include Modern UI
@@ -7,24 +7,22 @@
   !define MUI_UNWELCOMEFINISHPAGE_BITMAP "sidebar.bmp"
   !include "MUI2.nsh"
   !include "DirectSetup.nsh"
-  !include LogicLib.nsh
-
 
 ;--------------------------------
 ;General
 
   ;Name and file
-  Name "The Anubian War"
-  OutFile ..\..\target\release\EarthEternal_ValkalsShadow_TAW_Server_Setup.exe
+  Name "Reborn"
+  OutFile ..\..\target\release\EarthEternal_Reborn_Setup.exe
 
   ;Default installation folder
-  InstallDir "$LOCALAPPDATA\Earth Eternal - Valkal's Shadow"
+  InstallDir "$LOCALAPPDATA\Earth Eternal Reborn"
   
   ;Get installation folder from registry if available
-  InstallDirRegKey HKCU "Software\Earth Eternal - Valkal's Shadow" ""
+  InstallDirRegKey HKCU "Software\Earth Eternal Reborn" ""
 
   ;Request application privileges for Windows Vista
-  RequestExecutionLevel admin
+  RequestExecutionLevel user
 
 
 ;--------------------------------
@@ -49,8 +47,8 @@
 
 ;Start Menu Folder Page Configuration
   !define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKCU" 
-  !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\Earth Eternal - Valkal's Shadow" 
-  !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "Earth Eternal - Valkal's Shadow"
+  !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\Earth Eternal Reborn" 
+  !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "Earth Eternal Reborn"
   
   !insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
 
@@ -58,7 +56,7 @@
   !define MUI_FINISHPAGE_NOAUTOCLOSE
   !define MUI_FINISHPAGE_RUN
   !define MUI_FINISHPAGE_RUN_NOTCHECKED
-  !define MUI_FINISHPAGE_RUN_TEXT "Start Earth Eternal - Valkal's Shadow"
+  !define MUI_FINISHPAGE_RUN_TEXT "Start Earth Eternal Reborn"
   !define MUI_FINISHPAGE_RUN_FUNCTION "LaunchLink"
   !define MUI_FINISHPAGE_SHOWREADME_NOTCHECKED
   !define MUI_FINISHPAGE_SHOWREADME $INSTDIR\readme.txt
@@ -76,21 +74,6 @@
   !insertmacro MUI_LANGUAGE "English"
 
 ;--------------------------------
-;Functions
-
-Function .onInit
-UserInfo::GetAccountType
-pop $0
-${If} $0 != "admin" ;Require admin rights on NT4+
-    MessageBox mb_iconstop "Administrator rights required!"
-    SetErrorLevel 740 ;ERROR_ELEVATION_REQUIRED
-    Quit
-${EndIf}
-FunctionEnd
-
-
-
-;--------------------------------
 ;Installer Sections
 
 Section "Game Client" GameClient
@@ -100,18 +83,14 @@ Section "Game Client" GameClient
   ;ADD YOUR OWN FILES HERE...
   File /r ..\..\common\client\*.*
   File /r ..\..\..\sparkplayer-eartheternal\bin\assets\Resource
-  File planetforever.ico
+  File icon.ico
   File readme.txt
-  File EELauncher.exe
   
   ;Store installation folder
-  WriteRegStr HKCU "Software\Earth Eternal - Valkal's Shadow" "" $INSTDIR
+  WriteRegStr HKCU "Software\Earth Eternal Reborn" "" $INSTDIR
   
   ;Install URL handler for web launching
-  WriteRegStr HKCR "ee" "" "URL:The Anubian War Launcher Protocol"
-  WriteRegStr HKCR "ee" "URL Protocol" ""
-  WriteRegStr HKCR "ee" "URL Protocol" ""
-  WriteRegStr HKCR "ee\shell\open\command" "" '"$INSTDIR\EELauncher.exe" "%1"'
+  WriteRegStr HKCU "Software\Earth Eternal Reborn" "" $INSTDIR
   
   ;Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
@@ -119,28 +98,28 @@ Section "Game Client" GameClient
   ;Create shortcuts
   CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
   
-  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Earth Eternal - Valkal's Shadow.lnk" "$INSTDIR\Spark.exe" \
-    "http://game.theanubianwar.com/Release/Current/EarthEternal.car" \
-    $INSTDIR\planetforever.ico 0 SW_SHOWNORMAL ALT|CONTROL|SHIFT|P "Earth Eternal - Valkal's Shadow"
+  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Earth Eternal Reborn.lnk" "$INSTDIR\Spark.exe" \
+    "http://terraz.mooo.com/Release/Current/EarthEternal.car" \
+    $INSTDIR\icon.ico 0 SW_SHOWNORMAL ALT|CONTROL|SHIFT|P "Earth Eternal Reborn"
     
-  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Earth Eternal - Valkal's Shadow (Local Development Server).lnk" "$INSTDIR\Spark.exe" \
+  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Earth Eternal Reborn (Local Development Server).lnk" "$INSTDIR\Spark.exe" \
     "http://localhost:8080/Release/Current/EarthEternal.car" \
-    $INSTDIR\planetforever.ico 0 SW_SHOWNORMAL ALT|CONTROL|SHIFT|P "Earth Eternal - Valkal's Shadow (Local Development Server)"
+    $INSTDIR\icon.ico 0 SW_SHOWNORMAL ALT|CONTROL|SHIFT|P "Earth Eternal Reborn (Local Development Server)"
     
   CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
 SectionEnd
 
 Section "Direct X9.0 runtime" DX9
   IfSilent +4
-  	File directx_Jun2010_redist.exe
-  	ExecWait '"$INSTDIR\directx_Jun2010_redist.exe" "/T:$INSTDIR\DxTmp" /C'
-  	${DirectX_Install} "$INSTDIR\DxTmp"
+      File directx_Jun2010_redist.exe
+      ExecWait '"$INSTDIR\directx_Jun2010_redist.exe" "/T:$INSTDIR\DxTmp" /C'
+      ${DirectX_Install} "$INSTDIR\DxTmp"
 SectionEnd
 
 Section "Visual C++ 2010 runtime" VCR2010
   IfSilent +3
-  	File vcredist_x86.exe
-  	ExecWait '"$INSTDIR\vcredist_x86.exe.exe" "/passive" "/norestart"'
+    File vcredist_x86.exe
+    ExecWait '"$INSTDIR\vcredist_x86.exe" "/passive" "/norestart"'
 SectionEnd
 
 ;--------------------------------
@@ -168,12 +147,11 @@ Section "Uninstall"
   !insertmacro MUI_STARTMENU_GETFOLDER Application $StartMenuFolder
     
   Delete "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk"
-  Delete "$SMPROGRAMS\$StartMenuFolder\Earth Eternal - Valkal's Shadow.lnk"
-  Delete "$SMPROGRAMS\$StartMenuFolder\Earth Eternal - Valkal's Shadow (Local Development Server) (Local Development Server).lnk"
+  Delete "$SMPROGRAMS\$StartMenuFolder\Earth Eternal Reborn.lnk"
+  Delete "$SMPROGRAMS\$StartMenuFolder\Earth Eternal Reborn (Local Development Server).lnk"
   RMDir "$SMPROGRAMS\$StartMenuFolder"
 
-  DeleteRegKey /ifempty HKCR "ee"
-  DeleteRegKey /ifempty HKCU "Software\Earth Eternal - Valkal's Shadow"
+  DeleteRegKey /ifempty HKCU "Software\Earth Eternal Reborn"
 
 SectionEnd
 
@@ -185,6 +163,5 @@ Function licpageshow
 FunctionEnd
 
 Function LaunchLink
-  ;ExecShell "" "$SMPROGRAMS\$StartMenuFolder\Earth Eternal - Valkal's Shadow.lnk"
-  ExecShell "" "http://www.theanubianwar.com/valkals-shadow"
+  ExecShell "" "$SMPROGRAMS\$StartMenuFolder\Earth Eternal Reborn.lnk"
 FunctionEnd
